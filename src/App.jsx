@@ -1,34 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useState, useEffect, useCallback } from 'react';
+import Advice from './component/Advice';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [advice, setAdvice] = useState([]);
+
+  const fetchAdviceHandler = useCallback(async () => {
+    try {
+      const response = await fetch('https://api.adviceslip.com/advice');
+
+      if (!response.ok) {
+        throw new Error('Something went wrong!');
+      }
+
+      const data = await response.json();
+      setAdvice(data.slip);
+    } catch (error) {
+      alert(error);
+    }
+  }, []);
+
+  useEffect(() => {
+    fetchAdviceHandler();
+  }, [fetchAdviceHandler]);
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    <>
+      <main>
+        <Advice advice={advice} fetchAdviceHandler={fetchAdviceHandler} />
+      </main>
+    </>
+  );
 }
 
-export default App
+export default App;
