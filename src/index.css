@@ -81,12 +81,12 @@ select {
 body {
   background-color: var(--clr-neutral-700);
   font-family: var(--ff-primary);
-  padding: 0 2em;
 }
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 8em;
+  height: 100vh;
+  padding: 0 1.5em;
 }

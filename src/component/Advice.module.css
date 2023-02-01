@@ -6,9 +6,9 @@
   justify-content: center;
   align-content: center;
   text-align: center;
-  min-width: 21.5em;
   border-radius: 0.625em;
-  padding: 1.5em;
+  padding: 2.5em 1.5em;
+  box-shadow: 1.875em 3.125em 5em rgba(0, 0, 0, 0.100202);
   background-color: var(--clr-neutral-400);
 }
 
@@ -33,7 +33,7 @@
 
 .random-btn {
   position: absolute;
-  left: 41%;
+  left: 41.5%;
   bottom: -2em;
   display: flex;
   justify-content: center;
@@ -45,6 +45,34 @@
   background-color: var(--clr-primary-400);
 }
 
-.random-btn:has(:hover, :active) {
-  box-shadow: 0px 0px 40px var(--clr-primary-400);
+.random-btn:hover {
+  box-shadow: 0 0 2.5em var(--clr-primary-400);
+}
+
+/* Desktop View*/
+@media screen and (min-width: 62em) {
+  .card h1 {
+    font-size: 0.8125rem;
+  }
+
+  .card p {
+    font-size: 1.75rem;
+  }
+
+  .divider-img {
+    height: 1rem;
+  }
+
+  .random-btn {
+    left: 43.9%;
+  }
+}
+@media screen and (min-width: 90em) {
+  .card {
+    max-width: 33.75em;
+  }
+
+  .random-btn {
+    left: 44%;
+  }
 }
