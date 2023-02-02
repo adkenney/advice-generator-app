@@ -11,7 +11,7 @@ const Advice = props => {
         <h2>advice #{props.advice.id}</h2>
         <p>&ldquo;{props.advice.advice}&rdquo;</p>
         <picture>
-          <source media="(min-width: 62em)" srcSet={DividerDesktop}></source>
+          <source media="(min-width: 48em)" srcSet={DividerDesktop}></source>
           <img
             className={styles['divider-img']}
             src={DividerMobile}

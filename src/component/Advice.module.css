@@ -46,6 +46,7 @@
   width: 4em;
   border-radius: 50%;
   background-color: var(--clr-primary-400);
+  cursor: pointer;
 }
 
 .random-btn:hover {
