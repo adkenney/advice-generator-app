@@ -7,7 +7,7 @@
   align-content: center;
   text-align: center;
   border-radius: 0.625em;
-  padding: 2.5em 1.5em;
+  padding: 2.5em 4em;
   box-shadow: 1.875em 3.125em 5em rgba(0, 0, 0, 0.100202);
   background-color: var(--clr-neutral-400);
 }
@@ -28,7 +28,7 @@
 
 .divider-img {
   width: 100%;
-  margin: 0.5em 0 3.5em 0;
+  margin: 0.5em 0 1.5em 0;
 }
 
 .random-btn {

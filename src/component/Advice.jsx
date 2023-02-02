@@ -12,13 +12,18 @@ const Advice = props => {
         <p>&ldquo;{props.advice.advice}&rdquo;</p>
         <picture>
           <source media="(min-width: 62em)" srcSet={DividerDesktop}></source>
-          <img className={styles['divider-img']} src={DividerMobile}></img>
+          <img
+            className={styles['divider-img']}
+            src={DividerMobile}
+            alt=""
+          ></img>
         </picture>
         <button
           className={styles['random-btn']}
           onClick={props.fetchAdviceHandler}
+          aria-label="generate random quote"
         >
-          <img src={DiceIcon}></img>
+          <img src={DiceIcon} alt="Generate random quote"></img>
         </button>
       </div>
     </div>
