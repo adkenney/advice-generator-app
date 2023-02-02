@@ -6,8 +6,9 @@
   justify-content: center;
   align-content: center;
   text-align: center;
+  max-width: 37.5em;
   border-radius: 0.625em;
-  padding: 2.5em 4em;
+  padding: 2.5em 1.5em;
   box-shadow: 1.875em 3.125em 5em rgba(0, 0, 0, 0.100202);
   background-color: var(--clr-neutral-400);
 }
@@ -33,7 +34,9 @@
 
 .random-btn {
   position: absolute;
-  left: 41.5%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   bottom: -2em;
   display: flex;
   justify-content: center;
@@ -50,7 +53,11 @@
 }
 
 /* Desktop View*/
-@media screen and (min-width: 62em) {
+@media screen and (min-width: 48em) {
+  .card {
+    padding: 2.5em 3em;
+  }
+
   .card h1 {
     font-size: 0.8125rem;
   }
@@ -61,18 +68,5 @@
 
   .divider-img {
     height: 1rem;
-  }
-
-  .random-btn {
-    left: 43.9%;
-  }
-}
-@media screen and (min-width: 90em) {
-  .card {
-    max-width: 33.75em;
-  }
-
-  .random-btn {
-    left: 44%;
   }
 }
